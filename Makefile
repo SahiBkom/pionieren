@@ -5,11 +5,11 @@ all: mvlot mhottub-op-hoogte
 #  --autocenter --viewall
 
 mvlot:
-	openscad -o vlot/vlot_512.png --imgsize=4096,4096 vlot/vlot.scad
+	openscad -o vlot/vlot_512.png --imgsize=512,512 vlot/vlot.scad
 	openscad -o vlot/vlot_4096.png --imgsize=4096,4096 vlot/vlot.scad
 
 mhottub-op-hoogte:
-	openscad -o hottub-op-hoogte/hottub-op-hoogte_512.png --imgsize=4096,4096 hottub-op-hoogte/hottub-op-hoogte.scad
+	openscad -o hottub-op-hoogte/hottub-op-hoogte_512.png --imgsize=512,512 hottub-op-hoogte/hottub-op-hoogte.scad
 	openscad -o hottub-op-hoogte/hottub-op-hoogte_4096.png --imgsize=4096,4096 hottub-op-hoogte/hottub-op-hoogte.scad
 
 mfanta:
@@ -18,6 +18,6 @@ mfanta:
 		file=$${name##*/} ; \
 		echo "## $${file}" >> fanta/reamdme.md; \
 		echo "[![schema](./$${file%.*}_512.png)](./$${file%.*}_4096.png)" >> fanta/reamdme.md; \
-		openscad -o $${name%.*}_512.png --imgsize=4096,4096 $${name}; \
+		openscad -o $${name%.*}_512.png --imgsize=512,512 $${name}; \
 		openscad -o $${name%.*}_4096.png --imgsize=4096,4096 $${name}; \
 	done
